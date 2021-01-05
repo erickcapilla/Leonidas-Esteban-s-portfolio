@@ -1,5 +1,9 @@
-body{
+/* * {
   margin: 0px;
+} */
+
+body{
+  margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -15,19 +19,134 @@ h6 {
 }
 
 h1 {
+  color: white;
   font-size: 40px;
   line-height: 1.5;
   letter-spacing: -.2;
+  margin: 0;
+}
+
+h1 strong {
+  color: #026fff;
+}
+
+h2 {
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 40px;
 }
 
 .hero {
   height: 300px;
+  background-color: #1b2127;
+  background-image: url('../images/hero.jpg');
+  background-size: 500px 300px;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  display: flex;
+  align-items: center;
 }
 
-.project-details {
+.portfolio {
+  background-color: #fafafa;
+  padding: 20px;
+}
+
+.project {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+.project strong {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.project__details {
   width: 500px;
+}
+
+.project__details--title {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project__details--course,
+.project__details--date,
+.project__details--url {
+  margin: 10px 0;
+}
+
+.project__details--description {
+  font-size: 20px;
 }
 
 .project__imageContainer {
   width: 500px;
+}
+
+.menu {
+  height: inherit;
+}
+
+.header {
+  background-color: #1b2127;
+  color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  height: inherit;
+  display: flex;  
+  align-items: center;
+  padding: 0 10px;
+}
+
+.header ol {
+  display: flex;
+  height: inherit;
+}
+
+.header ol li {
+  height: inherit;
+}
+
+ol, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+} 
+
+figure {
+  margin: 0 ;
+}
+
+.footer {
+  color: white;
+  background-color: #1b2127;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer img {
+  vertical-align: middle;
+}
+
+.footer a {
+  color: white;
 }
