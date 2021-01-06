@@ -1,7 +1,3 @@
-/* * {
-  margin: 0px;
-} */
-
 body{
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
@@ -15,7 +11,6 @@ h5,
 h6 {
   font-family: 'Fjalla One', sans-serif;
   font-weight: normal;
-  /* font-style: italic; */
 }
 
 h1 {
@@ -42,12 +37,14 @@ h2 {
 .hero {
   height: 300px;
   background-color: #1b2127;
-  background-image: url('../images/hero.jpg');
-  background-size: 500px 300px;
-  background-repeat: no-repeat;
-  background-position-x: right;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.hero__image {
+  object-fit: cover;
+  display: flex;
 }
 
 .portfolio {
@@ -57,13 +54,13 @@ h2 {
 
 .project {
   background-color: white;
-  border: 1px solid gray;
   border-radius: 10px;
   margin-bottom: 10px;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0px 0px 3px 2px lightgrey;
 } 
 
 .project strong {
@@ -95,7 +92,8 @@ h2 {
 }
 
 .menu {
-  height: inherit;
+  display: flex;
+  align-items: center;
 }
 
 .header {
@@ -105,15 +103,21 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 0 10px 3px black;
+  position: relative;
 }
 
 .header a {
   color: white;
   text-decoration: none;
-  height: inherit;
-  display: flex;  
   align-items: center;
-  padding: 0 10px;
+  padding: 7px 30px;
+  margin: 15px;
+}
+
+.link__contac {
+  border: 1px solid;
+  border-radius: 5px;
 }
 
 .header ol {
@@ -143,6 +147,18 @@ figure {
   justify-content: space-between;
 }
 
+.platzi p {
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.platzi p strong {
+  font-weight: normal;
+}
+
+
 .footer img {
   vertical-align: middle;
 }
@@ -150,3 +166,124 @@ figure {
 .footer a {
   color: white;
 }
+
+.event__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.event__list--title {
+  margin-left: 20px;
+}
+
+.event {
+  background-color: #f4fbff;
+  margin: 10px;
+  width: 480px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0px 0px 3px 2px lightgrey;
+}
+
+.event img {
+  width: 480px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event__details {
+  margin: 20px 40px;
+  background-color: white;
+  margin-top: -40px;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.event__details--description {
+  text-align: left;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+.event__details--url {
+  color: #026fff;
+  border: 1px solid;
+  padding: 5px 55px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contac {
+  background-color: #026fff;
+  color: white;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social__link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  margin: 0 20px;
+}
+
+.social__link.twitter {
+  background-image: url('../images/twitter.svg');
+}
+
+.social__link.facebook {
+  background-image: url('../images/facebook.svg');
+}
+.social__link.github {
+  background-image: url('../images/github.svg');
+}
+.social__link.instagram {
+  background-image: url('../images/instagram.svg');
+}
+
+.contac__email input {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px 65px 10px 25px;
+  background-image: url('../images/envelope.svg');
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+}
+
+.contac__email button {
+  display: block;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+  box-sizing: content-box;
+}
+
+.contac__email h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: wrap;
+}
+
