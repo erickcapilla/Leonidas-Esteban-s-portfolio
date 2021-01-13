@@ -40,11 +40,11 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .hero__image {
   object-fit: cover;
-  display: flex;
 }
 
 .portfolio {
@@ -55,12 +55,13 @@ h2 {
 .project {
   background-color: white;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0px 0px 3px 2px lightgrey;
+  flex-wrap: wrap;
 } 
 
 .project strong {
@@ -68,7 +69,7 @@ h2 {
 }
 
 .project__details {
-  width: 500px;
+  width: 50%;
 }
 
 .project__details--title {
@@ -88,12 +89,15 @@ h2 {
 }
 
 .project__imageContainer {
-  width: 500px;
+  width: 50%;
+}
+
+.project__imageContainer img {
+  max-width: 100%;
 }
 
 .menu {
-  display: flex;
-  align-items: center;
+  height: inherit;
 }
 
 .header {
@@ -104,21 +108,23 @@ h2 {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 0 10px 3px black;
-  position: relative;
+  flex-wrap: wrap;
 }
 
 .header a {
   color: white;
   text-decoration: none;
+  display: flex;
   align-items: center;
-  padding: 7px 30px;
-  margin: 15px;
+  height: inherit;
+  padding: 0 10px;
 }
 
-.link__contac {
+/* .link__contac {
   border: 1px solid;
   border-radius: 5px;
-}
+  width: 50%;
+} */
 
 .header ol {
   display: flex;
@@ -145,6 +151,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .platzi p {
@@ -179,8 +186,8 @@ figure {
 
 .event {
   background-color: #f4fbff;
-  margin: 10px;
-  width: 480px;
+  margin: 1%;
+  width: 48%;
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
@@ -223,6 +230,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .social__link {
@@ -278,12 +286,154 @@ figure {
 }
 
 .container {
-  width: 1000px;
+  max-width: 1000px;
+  flex: 1;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
   height: inherit;
-  flex-wrap: wrap;
+  flex-wrap: inherit;
 }
 
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 1em;
+  }
+
+  .hero {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+
+  .hero__image {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    filter: opacity(80%) blur(1px);
+  }
+
+  h1 {
+    font-size: 2em;
+    z-index: 20;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    display: block;
+    height: auto;
+  }
+
+  .header ol {
+    display: block;
+  }
+
+  .header ol li {
+    height: 50px;
+  }
+
+  .header a {
+    justify-content: center;
+  }
+
+  .header .logo {
+    text-align: center;
+  }
+
+  .project {
+    display: block;
+  }
+
+  .project__imageContainer {
+    width: auto;
+    text-align: center;
+  }
+
+  .project__details {
+    width: auto;
+    font-size: 16px;
+  }
+
+  .project__details--course, .project__details--date, .project__details--url {
+    margin: .3em 0;
+  }
+
+  .project__details--title {
+    font-size: 1.5em;
+    margin-bottom: .3em;
+  }
+
+  .project__details--url {
+    font-size: 1em;
+  }
+
+  .project__details--course {
+    font-size: .7em;
+  }
+
+  .project__details--date {
+    font-size: .8em;
+  }
+
+  .event {
+    width: auto;
+    flex-shrink: initial;
+  }
+
+  .event img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .project__details {
+    font-size: 12px;
+  }
+
+  .event__details {
+    margin: -2em .5em .5em;
+    padding: 1em;
+  }
+
+  .contac {
+    height: auto;
+    padding: 1.5em 0;
+    text-align: center;
+    display: block;
+  }
+
+  .contac__email button {
+    margin: 1em auto;
+  }
+
+  .contac__email h3 {
+    margin-top: 0;
+  }
+
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.2em;
+  }
+
+  .hero {
+    padding: 2em 1em;
+  }
+}
