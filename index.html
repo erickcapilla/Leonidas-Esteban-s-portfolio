@@ -9,7 +9,8 @@
         <link rel="icon" type="image/png" href="images/favicon.png" />
         <title>Leonidas Esteban</title>
     </head>
-    <body>  
+    <body>
+        <i class="icon-menu burger-button" id="burger-menu"></i>
         <header class="header">
             <div class="container">
                 <figure class="logo">
@@ -143,5 +144,30 @@
                 </div>
             </div>
         </footer>
+        <script>
+
+            const ipad = window.matchMedia('screen and (max-width: 767px)');
+            const menu = document.querySelector('.menu');
+            const burgerButton = document.querySelector('#burger-menu');
+
+            ipad.addListener(validation);
+            
+            function validation(e) {
+                if (e.matches) {
+                    burgerButton.addEventListener('click', showHide);
+                } else {
+                    burgerButton.removeEventListener('click', showHide);
+                }
+            }
+            function showHide()
+            {
+                if(menu.classList.contains('is-active'))
+                {
+                    menu.classList.remove('is-active');
+                } else {
+                    menu.classList.add('is-active');
+                }
+            }
+        </script>
     </body>
 </html>
