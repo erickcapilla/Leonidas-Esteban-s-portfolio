@@ -1,2 +1,2 @@
-# Portafolio-curso-desarrollo-web-online
-A Leonidas Esteban's portfolio to course of Platzi (Responsive)
+# Leonidas Esteban's portafolio
+A Leonidas Esteban's portfolio for a course of Platzi (Responsive)
